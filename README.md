@@ -37,6 +37,16 @@ Com base nos dados obtidos, selecione uma prática ou dado de teste relevante e 
 
 ## Respostas
 
-**1. Repositório selecionado:** `<URL_DO_REPOSITÓRIO_AQUI>`
+**1. Repositório selecionado:** https://github.com/pandas-dev/pandas`
 
-**2. Explicação:** `<SUA_EXPLICAÇÃO_AQUI>`
+**2. Explicação:** O repositório Pandas foi selecionado para essa analise devido ao uso amplamente difundido dessa biblioteca entre programadores. Uma prática relevante observada nos dados é o uso de mocks, tendo apenas 3 ocorrências apontadas pelo TestMiner. Em geral, mocks são usados para substituir dependências externas ou partes complexas do sistema durante os testes, permitindo isolar comportamentos específicos. No entanto, o que o TestMiner apontou como mocks contém na verdade fixtures do pytest, que tem como objetivo fornecer dados reutilizáveis para os testes. Essas fixtures, como dummies_basic e dummies_with_unassigned, simulam diferentes cenários de entrada para a função from_dummies.
+O principal objetivo é testar o comportamento da função from_dummies, especialmente em situações de erro e condições de borda.
+Por exemplo:
+
+•	Tipos de entrada inválidos 
+•	Dados inconsistentes (NaN, valores inválidos) 
+•	Casos de uso reais 
+•	Compatibilidade com diferentes tipos de dados (int, float, string, bool)
+
+Isso permite verificar se a transformação de variáveis dummy em categorias ocorre corretamente e se erros corretos são lançados quando necessário. Assim, o foco está em garantir robustez e confiabilidade por meio de dados bem definidos, através do uso de fixtures.
+
